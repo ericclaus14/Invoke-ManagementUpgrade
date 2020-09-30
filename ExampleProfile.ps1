@@ -1,3 +1,4 @@
+# Change this location as needed
 Get-ChildItem C:\Scripts\Repos\Invoke-ManagementUpgrade\AutoLoad | ForEach-Object {. $_.FullName}
 
 # Thanks to Trevor Sullivan for this regular expression!
@@ -7,5 +8,6 @@ $ValidEmailAddress = '^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\
 Write-Output "Custom PowerShell environment loaded.`n"
 Write-Output "Hello, $($env:USERNAME), and welcome to $($env:COMPUTERNAME)!`n"
 
+# Change the location key and api key to your own (generated on accuweather.com) or comment the below two lines out
 $weather = (Invoke-WebRequest "http://dataservice.accuweather.com/currentconditions/v1/locationKey=8780_PC?apikey=aZaOq2KhWRUmGDiwJAAPzaHLBcDuSjMx%20").Content | ConvertFrom-Json
 Write-Output "It is currently $($weather.Temperature.Imperial.Value)$([char]176)F and $($weather.WeatherText) outside in Columbia, MD.`n"

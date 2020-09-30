@@ -4,11 +4,11 @@ function Set-ServerBaseConfig {
         Configure basic Windows Server settings.
 
     .DESCRIPTION
-         ?Activate Windows with AVMA, set the hostname, set the timezone, and optionally enable RDP. 
+         Activate Windows with AVMA, set the hostname, set the timezone, and optionally enable RDP. 
 
     .NOTES
         Author: Eric Claus, SysAdmin, North American Division of SDA, ericclaus@nadadventist.org
-        Last Modified: 9/29/20
+        Last Modified: 9/30/20
     #>
 
     # This is here so that default parameters, such as -Verbose, can be recognized by this script
