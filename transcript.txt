@@ -1,0 +1,27 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20201005170429
+Username: CONTOSO\administrator
+RunAs User: CONTOSO\administrator
+Configuration Name: 
+Machine: MGMT01 (Microsoft Windows NT 10.0.17763.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 184
+PSVersion: 5.1.17763.1432
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1432
+BuildVersion: 10.0.17763.1432
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Scripts\Repos\Invoke-ManagementUpgrade\transcript.txt
+User: 1 / 4
+User: 2 / 4
+User: 3 / 4
+User: 4 / 4
+**********************
+Windows PowerShell transcript end
+End time: 20201005170429
+**********************
