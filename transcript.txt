@@ -1,6 +1,6 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20201005170429
+Start time: 20201006133615
 Username: CONTOSO\administrator
 RunAs User: CONTOSO\administrator
 Configuration Name: 
@@ -17,11 +17,55 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is C:\Scripts\Repos\Invoke-ManagementUpgrade\transcript.txt
-User: 1 / 4
-User: 2 / 4
-User: 3 / 4
-User: 4 / 4
-**********************
-Windows PowerShell transcript end
-End time: 20201005170429
-**********************
+PS>TerminatingError(Get-ADUser): "Directory object not found"
+Get-ADUser : Directory object not found
+At C:\Scripts\Repos\Invoke-ManagementUpgrade\Reset-ADUserPwdLastSet.ps1:42 char:18
++ ...    $users = Get-ADUser -Filter "*" -SearchBase $SearchBase -Propertie ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [Get-ADUser], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.ActiveDirector
+   y.Management.Commands.GetADUser
+
+
+
+MyCommand             : Send-AlertEmail
+BoundParameters       : {[FunctionName, Reset-ADUserPwdLastSet], [DestinationEmail, ]}
+UnboundArguments      : {}
+ScriptLineNumber      : 29
+OffsetInLine          : 11
+HistoryId             : 28
+ScriptName            : C:\Scripts\Repos\Invoke-ManagementUpgrade\Reset-ADUserPwdLastSet.ps1
+Line                  :     trap {Send-AlertEmail -FunctionName "Reset-ADUserPwdLastSet" -DestinationEmail $AlertEmail; Exit 1}
+
+PositionMessage       : At C:\Scripts\Repos\Invoke-ManagementUpgrade\Reset-ADUserPwdLastSet.ps1:29 char:11
+                        +     trap {Send-AlertEmail -FunctionName "Reset-ADUserPwdLastSet" -Des ...
+                        +           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PSScriptRoot          : C:\Scripts\Repos\Invoke-ManagementUpgrade
+PSCommandPath         : C:\Scripts\Repos\Invoke-ManagementUpgrade\Reset-ADUserPwdLastSet.ps1
+InvocationName        : Send-AlertEmail
+PipelineLength        : 1
+PipelinePosition      : 1
+ExpectingInput        : False
+CommandOrigin         : Internal
+DisplayScriptPosition :
+
+PS>TerminatingError(Send-MailMessage): "Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+>> TerminatingError(Send-AlertEmail): "Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+>> TerminatingError(Send-AlertEmail): "Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+Send-AlertEmail : Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that 
+is not null or empty, and then try the command again.
+At C:\Scripts\Repos\Invoke-ManagementUpgrade\Reset-ADUserPwdLastSet.ps1:29 char:11
++     trap {Send-AlertEmail -FunctionName "Reset-ADUserPwdLastSet" -Des ...
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Send-AlertEmail], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Send-AlertEmail
+Send-AlertEmail : Cannot validate argument on parameter 'To'. The argument is null or empty. Provide an argument that is not null or empty,
+and then try the command again.
+At C:\Scripts\Repos\Invoke-ManagementUpgrade\Reset-ADUserPwdLastSet.ps1:29 char:11
++     trap {Send-AlertEmail -FunctionName "Reset-ADUserPwdLastSet" -Des ...
++           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Send-AlertEmail], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Send-AlertEmail
+
+
+
