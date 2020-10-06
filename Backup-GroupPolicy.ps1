@@ -31,7 +31,7 @@ function Backup-GroupPolicy{
 
     Param(
         # Where to store the backups
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory=$true)] 
             [string]$BackupDirectory,
     
         # Where is the log file to be stored?
